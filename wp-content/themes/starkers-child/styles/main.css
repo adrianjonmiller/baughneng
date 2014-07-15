@@ -10,25 +10,68 @@ nav > ul {
       nav > ul > li > a:hover {
         text-decoration: none; }
 
+.menu-inline:after, #footer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 html, body {
   height: 100%;
   position: relative; }
 
+.menu-inline > li {
+  float: left; }
+
 .container {
   max-width: 1080px; }
 
+#main-menu-container {
+  width: 100%;
+  top: 93px;
+  left: 0;
+  position: absolute; }
+
+#main-menu {
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 25px; }
+  #main-menu > li {
+    height: 25px;
+    line-height: 25px;
+    padding: 0 9px; }
+    #main-menu > li:first-of-type {
+      padding-left: 0; }
+
 [role="main"] {
-  padding-top: 100px;
+  padding-top: 136px;
   padding-bottom: 50px;
   min-height: 100%;
-  margin-bottom: -50px; }
+  margin-bottom: -30px; }
 
 h1, h2, h3, h4 {
   margin: 0; }
 
-header {
-  background: gray;
-  position: absolute;
+#header {
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  background-color: gray; }
+
+#footer {
+  background-color: gray; }
+  @media screen and (min-width: 480px) {
+    #footer {
+      height: 30px; }
+      #footer #copyright {
+        float: right; } }
+  #footer > * {
+    height: 30px;
+    line-height: 30px;
+    color: #fff; }
+
+.module {
+  border: solid thin gray;
+  padding: 18px;
+  border-radius: 9px; }
