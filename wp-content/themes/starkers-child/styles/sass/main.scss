@@ -1,4 +1,6 @@
 @import "bourbon/bourbon";
+@import "resets";
+@import "extends";
 
 html, body {
 	height: 100%;
@@ -27,6 +29,3 @@ header {
 	left: 0;
 	width: 100%;
 }
-
-
-
