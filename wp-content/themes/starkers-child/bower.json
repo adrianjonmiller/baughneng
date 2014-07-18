@@ -19,6 +19,7 @@
     "dont_over_think_it": "https://github.com/adrianjonmiller/dont_over_think_it.git#~0.0.1",
     "ionicons": "~1.4.1",
     "jsbehave": "https://github.com/adrianjonmiller/jsbehave.git",
-    "normalize-css": "~3.0.1"
+    "normalize-css": "~3.0.1",
+    "flexslider": "*"
   }
 }

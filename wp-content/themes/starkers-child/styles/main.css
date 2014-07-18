@@ -17,10 +17,14 @@ nav > ul {
 
 html, body {
   height: 100%;
-  position: relative; }
+  position: relative;
+  background-image: url(../img/aluminium-background.jpg); }
 
 .menu-inline > li {
   float: left; }
+
+p {
+  margin-top: 0; }
 
 .container {
   max-width: 1080px; }
@@ -34,13 +38,53 @@ html, body {
 #main-menu {
   max-width: 1080px;
   margin: 0 auto;
-  height: 25px; }
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+  padding: 0 18px; }
   #main-menu > li {
     height: 25px;
     line-height: 25px;
-    padding: 0 9px; }
-    #main-menu > li:first-of-type {
-      padding-left: 0; }
+    padding: 0;
+    position: relative; }
+    #main-menu > li > a {
+      height: 25px;
+      line-height: 25px;
+      font-size: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: 0 9px;
+      display: block; }
+      #main-menu > li > a:hover {
+        background-color: rgba(0, 0, 0, 0.5); }
+    #main-menu > li.current-menu-item > a {
+      background-color: rgba(0, 0, 0, 0.5); }
+    #main-menu > li:hover > .sub-menu {
+      left: 0;
+      height: auto; }
+
+.sub-menu {
+  position: absolute;
+  overflow: hidden;
+  height: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 100%;
+  z-index: 1; }
+  .sub-menu > li {
+    padding: 0;
+    margin: 0; }
+    .sub-menu > li > a {
+      white-space: nowrap;
+      color: #fff;
+      text-decoration: none;
+      padding: 3px;
+      display: block; }
+      .sub-menu > li > a:hover {
+        background-color: rgba(0, 0, 0, 0.5); }
 
 [role="main"] {
   padding-top: 136px;
@@ -71,7 +115,25 @@ h1, h2, h3, h4 {
     line-height: 30px;
     color: #fff; }
 
-.module {
-  border: solid thin gray;
-  padding: 18px;
-  border-radius: 9px; }
+.banner-thumbnail {
+  max-width: 400px;
+  margin: 0 auto; }
+
+.flexslider {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 18px 18px 0 0;
+  padding: 100px;
+  box-shadow: none;
+  margin-bottom: 0; }
+
+.featured-items {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 18px 18px;
+  padding: 18px; }
+
+.heading-large {
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0;
+  font-weight: normal; }

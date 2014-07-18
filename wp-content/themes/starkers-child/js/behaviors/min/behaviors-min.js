@@ -1,0 +1,1 @@
+DLN.Behaviors.flexslider=function(e){e.flexslider()};

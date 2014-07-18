@@ -5,11 +5,26 @@ wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jque
 wp_enqueue_script('jquery');
 	
 function starkers_script_enqueuer() {
+
+	// Scripts
+
 	wp_register_script( 'application', get_stylesheet_directory_uri().'/bower_components/jsbehave/application.js', array( 'jquery' ) );
 	wp_enqueue_script( 'application' );
 
+	wp_register_script( 'flexslider-js', get_stylesheet_directory_uri().'/bower_components/flexslider/jquery.flexslider-min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'flexslider-js' );
+
+	wp_register_script( 'behaviors', get_stylesheet_directory_uri().'/js/behaviors/behaviors.js', array( 'jquery' ) );
+	wp_enqueue_script( 'behaviors' );
+
+	
+	// Styles
+
 	wp_register_style( 'normalize-css', get_stylesheet_directory_uri().'/bower_components/normalize-css/normalize.css', '', '', 'screen' );
 	wp_enqueue_style( 'normalize-css' );
+
+	wp_register_style( 'flexslider-css', get_stylesheet_directory_uri().'/bower_components/flexslider/flexslider.css', '', '', 'screen' );
+	wp_enqueue_style( 'flexslider-css' );
 
 	wp_register_style( 'ionicons', get_stylesheet_directory_uri().'/bower_components/ionicons/css/ionicons.min.css', '', '', 'screen' );
 	wp_enqueue_style( 'ionicons' );
@@ -72,24 +87,26 @@ add_action( 'widgets_init', 'my_register_sidebars' );
 
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-	register_post_type( 'insurance_patients',
+	register_post_type( 'banner',
 		array(
 			'labels' => array(
-				'name' => __( 'Insurance Patients' ),
-				'singular_name' => __( 'Insurance Patient' )
+				'name' => __( 'Banners' ),
+				'singular_name' => __( 'Banner' )
 			),
+
+			'taxonomies' => array('category'),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'insurance_patients'),
+			'rewrite' => array('slug' => 'banner'),
 		)
 	);
 }
 
-// add_action('init', 'my_custom_init');
-// function my_custom_init() {
-// 	add_post_type_support( 'design', 'thumbnail' );
-// 	add_post_type_support( 'design', 'excerpt' );
-// }
+add_action('init', 'my_custom_init');
+function my_custom_init() {
+	add_post_type_support( 'banner', 'thumbnail' );
+	add_post_type_support( 'banner', 'excerpt' );
+}
 
 add_filter('show_admin_bar', '__return_false');
 
