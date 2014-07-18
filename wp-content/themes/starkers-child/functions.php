@@ -100,12 +100,28 @@ function create_post_type() {
 			'rewrite' => array('slug' => 'banner'),
 		)
 	);
+	register_post_type( 'product',
+		array(
+			'labels' => array(
+				'name' => __( 'Products' ),
+				'singular_name' => __( 'Product' )
+			),
+
+			'taxonomies' => array('category'),
+			'public' => true,
+			'has_archive' => true,
+			'rewrite' => array('slug' => 'product'),
+		)
+	);
 }
 
 add_action('init', 'my_custom_init');
 function my_custom_init() {
 	add_post_type_support( 'banner', 'thumbnail' );
 	add_post_type_support( 'banner', 'excerpt' );
+
+	add_post_type_support( 'product', 'thumbnail' );
+	add_post_type_support( 'product', 'excerpt' );
 }
 
 add_filter('show_admin_bar', '__return_false');

@@ -178,3 +178,32 @@ h1, h2, h3, h4 {
 	margin: 0;
 	font-weight: normal;
 }
+
+// Products
+
+.products {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	.product {
+		@extend %clearfix;
+
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		.product-thumbnail {
+			float: left;
+			max-width: 100px;
+			> img {
+				width: 100%;
+			}
+		}
+
+		.product-details {
+			background-color: $color-gold;
+			min-height: 100px;
+		}
+	}
+}

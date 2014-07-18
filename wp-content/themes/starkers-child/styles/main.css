@@ -10,7 +10,7 @@ nav > ul {
       nav > ul > li > a:hover {
         text-decoration: none; }
 
-.menu-inline:after, #footer:after {
+.menu-inline:after, #footer:after, .products .product:after {
   content: "";
   display: table;
   clear: both; }
@@ -137,3 +137,20 @@ h1, h2, h3, h4 {
   line-height: 30px;
   margin: 0;
   font-weight: normal; }
+
+.products {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .products .product {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .products .product .product-thumbnail {
+      float: left;
+      max-width: 100px; }
+      .products .product .product-thumbnail > img {
+        width: 100%; }
+    .products .product .product-details {
+      background-color: #9e8643;
+      min-height: 100px; }
