@@ -22,7 +22,7 @@
 <div class="col-2-3">
 	<ul class="products">
 		<?php
-		$args = array( 'post_type' => 'application', 'order' => 'ASC', 'orderby' => 'menu_order' );
+		$args = array( 'post_type' => 'application' );
 		$loop = new WP_Query( $args );?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 		<li class="product">
