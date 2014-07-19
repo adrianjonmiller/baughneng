@@ -100,17 +100,17 @@ function create_post_type() {
 			'rewrite' => array('slug' => 'banner'),
 		)
 	);
-	register_post_type( 'product',
+	register_post_type( 'application',
 		array(
 			'labels' => array(
-				'name' => __( 'Products' ),
-				'singular_name' => __( 'Product' )
+				'name' => __( 'Applications' ),
+				'singular_name' => __( 'Application' )
 			),
 
 			'taxonomies' => array('category'),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'product'),
+			'rewrite' => array('slug' => 'application'),
 		)
 	);
 }
@@ -120,8 +120,8 @@ function my_custom_init() {
 	add_post_type_support( 'banner', 'thumbnail' );
 	add_post_type_support( 'banner', 'excerpt' );
 
-	add_post_type_support( 'product', 'thumbnail' );
-	add_post_type_support( 'product', 'excerpt' );
+	add_post_type_support( 'application', 'thumbnail' );
+	add_post_type_support( 'application', 'excerpt' );
 }
 
 add_filter('show_admin_bar', '__return_false');

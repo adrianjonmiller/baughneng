@@ -13,6 +13,7 @@
  * @subpackage 	Starkers
  * @since 		Starkers 4.0
  */
+
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
@@ -21,21 +22,20 @@
 <div class="col-2-3">
 	<ul class="products">
 		<?php
-		$args = array( 'post_type' => 'product', 'order' => 'ASC', 'orderby' => 'menu_order' );
+		$args = array( 'post_type' => 'application', 'order' => 'ASC', 'orderby' => 'menu_order' );
 		$loop = new WP_Query( $args );?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 		<li class="product">
-			<?php
+				<?php
 				if ( has_post_thumbnail() ) { ?>
 				<div class="product-thumbnail">
 					<?php the_post_thumbnail('full'); ?>
 				</div>
-			<div class="product-details">
-				<h3 class="heading-large"><?php the_title(); ?></h3>
-				<?php the_content(); ?>
-			</div>
-			<?php	} 
-			?>
+				<?php	} ?>
+				<h3 class="heading-large">
+					<?php the_title(); ?>
+				</h3>
+				<?php the_excerpt(); ?>
 		</li>
 		<?php endwhile; ?>
 	</ul>
