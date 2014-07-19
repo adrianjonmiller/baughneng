@@ -42,7 +42,8 @@ p {
 	background-color: rgba(black, 0.3);
 	border-radius: $pad/2;
 	padding: 0 $pad;
-	z-index: 100;
+	position: relative;
+	z-index: 10;
 
 	> li {
 		height: 25px;

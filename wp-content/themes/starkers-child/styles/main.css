@@ -42,7 +42,8 @@ p {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 9px;
   padding: 0 18px;
-  z-index: 100; }
+  position: relative;
+  z-index: 10; }
   #main-menu > li {
     height: 25px;
     line-height: 25px;
