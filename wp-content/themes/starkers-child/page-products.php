@@ -42,7 +42,7 @@
 						<?php the_post_thumbnail('thumbnail'); ?>
 					</div>
 					<?php	} ?>
-					<h3 class="heading-large">
+					<h3 class="heading-grande">
 						<?php the_title(); ?>
 					</h3>
 					<?php the_excerpt(); ?>

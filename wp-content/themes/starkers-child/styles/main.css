@@ -22,6 +22,11 @@ h1, h2, h3, h4 {
   margin: 0;
   font-weight: normal; }
 
+.heading-grande {
+  color: #fff;
+  font-size: 28px;
+  line-height: 20px; }
+
 body {
   font-family: "Eurostile", sans-serif;
   font-size: 16px;
