@@ -1,8 +1,8 @@
 @import "bourbon/bourbon";
 @import "resets";
+@import "vars";
 @import "extends";
 @import "typography";
-@import "vars";
 @import "styles";
 
 $color-gray: #ccc;
@@ -198,16 +198,6 @@ p {
 	font-size: 24px;
 	line-height: 28px;
 	color: #666;
-}
-
-.heading-large {
-	font-size: 36px;
-	line-height: 42px;
-	font-weight: bold;
-	color: #1a1a1a;
-	margin: 0;
-	font-weight: normal;
-	min-height: 42px;
 }
 
 // Products

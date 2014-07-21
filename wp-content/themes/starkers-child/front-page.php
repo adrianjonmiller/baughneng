@@ -45,7 +45,7 @@
 
 <ul class="featured-items grid grid-pad" data-behavior="same_height">
 	<?php
-	$args = array( 'post_type' => array('application', 'banner'), 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => 4, 'category_name' => 'featured-home' );
+	$args = array( 'post_type' => array('application', 'banner', 'post'), 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => 4, 'category_name' => 'featured-home' );
 	$loop = new WP_Query( $args );?>
 	<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 	<li class="col-1-2 featured-item">
