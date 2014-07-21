@@ -60,8 +60,9 @@ p {
       display: block; }
       #main-menu > li > a:hover {
         background-color: rgba(0, 0, 0, 0.5); }
-    #main-menu > li.current-menu-item > a {
-      background-color: rgba(0, 0, 0, 0.5); }
+    #main-menu > li.current-menu-item > a, #main-menu > li.current-menu-parent > a {
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: default; }
     #main-menu > li:hover > .sub-menu {
       left: 0;
       height: auto; }

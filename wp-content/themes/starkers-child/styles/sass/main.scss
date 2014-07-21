@@ -65,8 +65,9 @@ p {
 			}
 		}
 
-		&.current-menu-item > a {
+		&.current-menu-item > a, &.current-menu-parent > a {
 			background-color: rgba(black, 0.5);
+			cursor: default;
 		}
 		&:hover {
 			> .sub-menu {
