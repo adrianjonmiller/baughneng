@@ -204,8 +204,10 @@ h1, h2, h3, h4 {
 
 		position: relative;
 		padding: $pad;
+		padding-left: 125px + $pad;
 
 		color: #fff;
+		margin-bottom: $pad;
 
 		> p {
 			color: #fff;
@@ -214,11 +216,12 @@ h1, h2, h3, h4 {
 		}
 
 		.product-thumbnail {
-			margin: -$pad;
-			margin-right: $pad;
-			float: left;
+			height: 100%;
+			position: absolute;
 			max-width: 125px;
 			background-color: #fff;
+			top: 0;
+			left: 0;
 
 			> img {
 				display: block;

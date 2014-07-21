@@ -156,17 +156,20 @@ h1, h2, h3, h4 {
     border-radius: 0 18px 0 0;
     position: relative;
     padding: 18px;
-    color: #fff; }
+    padding-left: 143px;
+    color: #fff;
+    margin-bottom: 18px; }
     .products .product > p {
       color: #fff;
       height: 100%;
       overflow: hidden; }
     .products .product .product-thumbnail {
-      margin: -18px;
-      margin-right: 18px;
-      float: left;
+      height: 100%;
+      position: absolute;
       max-width: 125px;
-      background-color: #fff; }
+      background-color: #fff;
+      top: 0;
+      left: 0; }
       .products .product .product-thumbnail > img {
         display: block;
         width: 100%; }
