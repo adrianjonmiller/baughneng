@@ -33,12 +33,11 @@
 
 <div class="white-bg">
 
-<?php
-		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1, 'category__in' => $output );
-		$loop = new WP_Query( $args );?>
 <div class="flexslider" data-behavior="flexslider_thumbnails">
 	<ul class="slides" id="banner">
-		
+		<?php
+		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1, 'category__in' => $output );
+		$loop = new WP_Query( $args );?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 		<?php
 			$post_thumbnail_id = get_post_thumbnail_id();
