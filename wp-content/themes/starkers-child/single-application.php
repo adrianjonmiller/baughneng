@@ -24,7 +24,9 @@
 		$output = '';
 		if($categories){
 			foreach($categories as $category) {
-				$output .= $category->term_id.$separator;
+				if($category->term_id != 1) {
+					$output .= $category->term_id.$separator;
+				}
 			}
 		$output= trim($output, $separator);
 		}
@@ -36,7 +38,7 @@
 <div class="flexslider" data-behavior="flexslider_thumbnails">
 	<ul class="slides" id="banner">
 		<?php
-		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1, 'category__in' => $output );
+		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1, 'category__and' => $output );
 		$loop = new WP_Query( $args );?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 		<?php
