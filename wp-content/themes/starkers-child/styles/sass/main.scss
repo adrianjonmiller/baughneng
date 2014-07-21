@@ -179,6 +179,9 @@ p {
 	box-shadow: none;
 	margin-bottom: 0;
 	border-radius: $pad $pad 0 0;
+	font-size: 24px;
+	line-height: 28px;
+	color: #666;
 }
 
 .featured-items {
@@ -188,10 +191,13 @@ p {
 }
 
 .heading-large {
-	font-size: 30px;
-	line-height: 30px;
+	font-size: 36px;
+	line-height: 42px;
+	font-weight: bold;
+	color: #1a1a1a;
 	margin: 0;
 	font-weight: normal;
+	height: 42px;
 }
 
 // Products
