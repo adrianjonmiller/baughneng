@@ -24,7 +24,7 @@
 		$output = '';
 		if($categories){
 			foreach($categories as $category) {
-				if($category->term_id != 1) {
+				if($category->term_id != 1 && $category->term_id != 11) {
 					$output .= $category->term_id.$separator;
 				}
 			}
