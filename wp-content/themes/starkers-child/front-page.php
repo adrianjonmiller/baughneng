@@ -18,7 +18,7 @@
 
 
 
-<div class="grid flexslider semi-transparent-bg" data-behavior="flexslider">
+<div class="flexslider semi-transparent-bg" data-behavior="flexslider">
 	<ul class="slides" id="banner">
 		<?php
 		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'category_name' => 'home' );
@@ -43,14 +43,27 @@
 	</ul>
 </div>
 
+<ul class="featured-items grid grid-pad" data-behavior="same_height">
+	<?php
+	$args = array( 'post_type' => array('application', 'banner'), 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => 4, 'category_name' => 'featured-home' );
+	$loop = new WP_Query( $args );?>
+	<?php while ( $loop->have_posts() ) : $loop->the_post();?>
+	<li class="col-1-2 featured-item">
+		<a href="<?php echo get_permalink(); ?>">
+			<?php if ( has_post_thumbnail() ) { ?>
+			<div class="featured-thumbnail">
+				<?php the_post_thumbnail('full'); ?>
+			</div>
+			<?php	} ?>
+			<h3 class="heading-large">
+				<?php the_title(); ?>
+			</h3>
+			<?php the_excerpt(); ?>
+		</a>
+	</li>
+	<?php endwhile; ?>
+</ul>
 
-<div class="col-1-">
-	<div class="module featured-items">
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-		<h2><?php the_title(); ?></h2>
-		<?php the_content(); ?>
-		<?php endwhile; ?>
-	</div>
-</div>
+
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

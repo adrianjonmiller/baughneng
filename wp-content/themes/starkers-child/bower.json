@@ -20,6 +20,7 @@
     "ionicons": "~1.4.1",
     "jsbehave": "https://github.com/adrianjonmiller/jsbehave.git",
     "normalize-css": "~3.0.1",
-    "flexslider": "*"
+    "flexslider": "*",
+    "imagesloaded": "~3.1.8"
   }
 }

@@ -14,6 +14,9 @@ function starkers_script_enqueuer() {
 	wp_register_script( 'flexslider-js', get_stylesheet_directory_uri().'/bower_components/flexslider/jquery.flexslider-min.js', array( 'jquery' ) );
 	wp_enqueue_script( 'flexslider-js' );
 
+	wp_register_script( 'imagesloaded', get_stylesheet_directory_uri().'/bower_components/imagesloaded/imagesloaded.pkgd.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'imagesloaded' );
+
 	wp_register_script( 'behaviors', get_stylesheet_directory_uri().'/js/behaviors/behaviors.js', array( 'jquery' ) );
 	wp_enqueue_script( 'behaviors' );
 

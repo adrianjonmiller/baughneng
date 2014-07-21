@@ -1,1 +1,1 @@
-DLN.Behaviors.flexslider=function(l){l.flexslider()},DLN.Behaviors.flexslider_thumbnails=function(l){l.flexslider({controlNav:"thumbnails"})};
+DLN.Behaviors.flexslider=function(e){e.flexslider()},DLN.Behaviors.flexslider_thumbnails=function(e){e.flexslider({controlNav:"thumbnails"})},DLN.Behaviors.same_height=function(e){var i=0;e.imagesLoaded(function(){console.log("success"),e.children().each(function(){$(this).outerHeight()>=i&&(i=$(this).height())}),e.find("a").each(function(){$(this).css("height",i)})}),console.log(i)};
