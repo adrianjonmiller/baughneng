@@ -15,6 +15,9 @@ nav > ul {
   display: table;
   clear: both; }
 
+h1, h2, h3, h4 {
+  margin: 0; }
+
 body {
   font-family: "Eurostile-Reg", sans-serif;
   text-rendering: optimizeLegibility;
@@ -38,6 +41,13 @@ html, body {
 
 .menu-inline > li {
   float: left; }
+
+h2 {
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 2em;
+  margin-bottom: 18px; }
 
 p {
   margin-top: 0; }
@@ -113,9 +123,6 @@ p {
   margin-bottom: -30px;
   z-index: 1; }
 
-h1, h2, h3, h4 {
-  margin: 0; }
-
 #header {
   top: 0;
   left: 0;
@@ -141,12 +148,12 @@ h1, h2, h3, h4 {
   margin: 0 auto; }
 
 .flexslider {
-  background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-radius: 18px 18px 0 0;
   padding: 100px;
   box-shadow: none;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  background: transparent; }
 
 .featured-items {
   background-color: rgba(255, 255, 255, 0.5);
@@ -192,3 +199,13 @@ h1, h2, h3, h4 {
       .products .product a .product-thumbnail > img {
         display: block;
         width: 100%; }
+
+.semi-transparent-bg {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 18px;
+  border-radius: 18px; }
+
+.white-bg {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 18px; }

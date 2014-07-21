@@ -17,39 +17,42 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-
-
-<div class="col-2-3">
-	<ul class="products">
-		<?php
-		$args = array( 'post_type' => 'application', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1 );
-		$loop = new WP_Query( $args );?>
-		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
-		<li class="product">
-			<a href="<?php echo get_page_link(); ?>">
-				<?php if ( has_post_thumbnail() ) { ?>
-				<div class="product-thumbnail">
-					<?php the_post_thumbnail('full'); ?>
-				</div>
-				<?php	} ?>
-				<h3 class="heading-large">
-					<?php the_title(); ?>
-				</h3>
-				<?php the_excerpt(); ?>
-			</a>
-		</li>
-		<?php endwhile; ?>
-	</ul>
-</div>
-
-
-<div class="col-1-">
-	<div class="module featured-items">
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-		<h2><?php the_title(); ?></h2>
-		<?php the_content(); ?>
-		<?php endwhile; ?>
+	<div class="col-2-3">
+		<div class="module semi-transparent-bg">
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+			<?php the_content(); ?>
+			<?php endwhile; ?>
+		</div>
 	</div>
-</div>
+</div> <!-- Close Grid -->
+
+
+
+<div class="grid"> <!-- Open New grid -->
+	<div class="col-2-3">
+		<ul class="products">
+			<?php
+			$args = array( 'post_type' => 'application', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1 );
+			$loop = new WP_Query( $args );?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post();?>
+			<li class="product">
+				<a href="<?php echo get_page_link(); ?>">
+					<?php if ( has_post_thumbnail() ) { ?>
+					<div class="product-thumbnail">
+						<?php the_post_thumbnail('full'); ?>
+					</div>
+					<?php	} ?>
+					<h3 class="heading-large">
+						<?php the_title(); ?>
+					</h3>
+					<?php the_excerpt(); ?>
+				</a>
+			</li>
+			<?php endwhile; ?>
+		</ul>
+	</div>
+
+
+
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

@@ -18,7 +18,7 @@
 
 
 
-<div class="grid flexslider" data-behavior="flexslider">
+<div class="grid flexslider semi-transparent-bg" data-behavior="flexslider">
 	<ul class="slides" id="banner">
 		<?php
 		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order' );

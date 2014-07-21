@@ -19,6 +19,14 @@ html, body {
 	}
 }
 
+h2 {
+	color: #666666;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	font-size: 2em;
+	margin-bottom: $pad;
+}
+
 p {
 	margin-top: 0;
 }
@@ -119,10 +127,6 @@ p {
 	z-index: 1;
 }
 
-h1, h2, h3, h4 {
-	margin: 0;
-}
-
 #header {
 	top: 0;
 	left: 0;
@@ -166,12 +170,12 @@ h1, h2, h3, h4 {
 }
 
 .flexslider {
-	background-color: rgba(white, .5);
 	border: none;
 	border-radius: $pad $pad 0 0;
 	padding: 100px;
 	box-shadow: none;
 	margin-bottom: 0;
+	background: transparent;
 }
 
 .featured-items {
@@ -236,4 +240,17 @@ h1, h2, h3, h4 {
 		}
 
 	}
+}
+
+.semi-transparent-bg {
+	background-color: rgba(white, .5);
+	padding: $pad;
+	border-radius: $pad;
+}
+
+
+.white-bg {
+	background-color: #fff;
+	border-radius: $pad;
+	padding: $pad;
 }

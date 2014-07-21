@@ -17,25 +17,23 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-<?php
-$categories = get_the_category();
-$separator = ' ';
-$output = '';
-if($categories){
-	foreach($categories as $category) {
-		$output .= $category->term_id;
-	}
-// echo trim($output, $separator);
-}
-
-?>
-
-
+	<h2 class="semi-transparent-bg"><?php the_title(); ?></h2>
+	<?php
+		$categories = get_the_category();
+		$separator = ',';
+		$output = '';
+		if($categories){
+			foreach($categories as $category) {
+				$output .= $category->term_id.$separator;
+			}
+		$output= trim($output, $separator);
+		}
+	?>
 <?php endwhile; ?>
 
+<div class="white-bg">
 
-<div class="grid flexslider" data-behavior="flexslider">
+<div class="flexslider" data-behavior="flexslider_thumbnails">
 	<ul class="slides" id="banner">
 		<?php
 		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1, 'category__in' => $output );
@@ -62,11 +60,12 @@ if($categories){
 
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2><?php the_title(); ?></h2>
+
 <?php the_content(); ?>
 
 <?php endwhile; ?>
 
+</div>
 
 
 
