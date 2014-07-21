@@ -203,6 +203,9 @@ p {
   margin-top: 0;
   border-radius: 0 0 18px 18px; }
 
+.products {
+  padding: 0; }
+
 .products .product, .products .featured-item, .featured-items .product, .featured-items .featured-item {
   margin-bottom: 18px; }
   .products .product > a, .products .featured-item > a, .featured-items .product > a, .featured-items .featured-item > a {

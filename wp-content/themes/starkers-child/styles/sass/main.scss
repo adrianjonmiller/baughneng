@@ -218,6 +218,10 @@ p {
 	border-radius: 0 0 $pad $pad;
 }
 
+.products {
+	padding: 0;
+}
+
 .products, .featured-items {
 	@extend %strip-list;
 

@@ -39,7 +39,7 @@
 				<a href="<?php echo get_permalink(); ?>">
 					<?php if ( has_post_thumbnail() ) { ?>
 					<div class="product-thumbnail">
-						<?php the_post_thumbnail('full'); ?>
+						<?php the_post_thumbnail('thumbnail'); ?>
 					</div>
 					<?php	} ?>
 					<h3 class="heading-large">
