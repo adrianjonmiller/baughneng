@@ -21,7 +21,7 @@
 <div class="grid flexslider semi-transparent-bg" data-behavior="flexslider">
 	<ul class="slides" id="banner">
 		<?php
-		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order' 'category_name' => 'home' );
+		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'category_name' => 'home' );
 		$loop = new WP_Query( $args );?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 		<li class="grid">
