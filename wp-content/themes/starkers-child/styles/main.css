@@ -34,6 +34,16 @@ body {
   -ms-font-feature-settings: "liga" 1;
   font-feature-settings: "liga" 1; }
 
+.semi-transparent-bg {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 18px;
+  border-radius: 18px; }
+
+.white-bg {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 18px; }
+
 html, body {
   height: 100%;
   position: relative;
@@ -154,7 +164,7 @@ p {
   padding: 100px;
   box-shadow: none;
   margin-bottom: 0;
-  background: transparent; }
+  border-radius: 18px 18px 0 0; }
 
 .featured-items {
   background-color: rgba(255, 255, 255, 0.5);
@@ -200,13 +210,3 @@ p {
       .products .product a .product-thumbnail > img {
         display: block;
         width: 100%; }
-
-.semi-transparent-bg {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 18px;
-  border-radius: 18px; }
-
-.white-bg {
-  background-color: #fff;
-  border-radius: 18px;
-  padding: 18px; }

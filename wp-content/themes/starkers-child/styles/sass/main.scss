@@ -3,6 +3,7 @@
 @import "extends";
 @import "typography";
 @import "vars";
+@import "styles";
 
 $color-gray: #ccc;
 
@@ -72,7 +73,7 @@ p {
 			padding: 0 $pad/2;
 			display: block;
 			white-space: nowrap;
-			
+
 			&:hover {
 				background-color: rgba(black, 0.5);
 			}
@@ -177,7 +178,7 @@ p {
 	padding: 100px;
 	box-shadow: none;
 	margin-bottom: 0;
-	background: transparent;
+	border-radius: $pad $pad 0 0;
 }
 
 .featured-items {
@@ -242,17 +243,4 @@ p {
 		}
 
 	}
-}
-
-.semi-transparent-bg {
-	background-color: rgba(white, .5);
-	padding: $pad;
-	border-radius: $pad;
-}
-
-
-.white-bg {
-	background-color: #fff;
-	border-radius: $pad;
-	padding: $pad;
 }
