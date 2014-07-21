@@ -71,6 +71,8 @@ p {
 
 			padding: 0 $pad/2;
 			display: block;
+			white-space: nowrap;
+			
 			&:hover {
 				background-color: rgba(black, 0.5);
 			}

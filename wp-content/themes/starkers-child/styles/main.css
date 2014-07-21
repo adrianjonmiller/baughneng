@@ -83,7 +83,8 @@ p {
       text-transform: uppercase;
       letter-spacing: .2em;
       padding: 0 9px;
-      display: block; }
+      display: block;
+      white-space: nowrap; }
       #main-menu > li > a:hover {
         background-color: rgba(0, 0, 0, 0.5); }
     #main-menu > li.current-menu-item > a, #main-menu > li.current-menu-parent > a {
