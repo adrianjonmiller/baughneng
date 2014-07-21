@@ -26,8 +26,8 @@
 		$loop = new WP_Query( $args );?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 		<li class="product">
-				<?php
-				if ( has_post_thumbnail() ) { ?>
+			<a href="<?php echo get_page_link(); ?>">
+				<?php if ( has_post_thumbnail() ) { ?>
 				<div class="product-thumbnail">
 					<?php the_post_thumbnail('full'); ?>
 				</div>
@@ -36,6 +36,7 @@
 					<?php the_title(); ?>
 				</h3>
 				<?php the_excerpt(); ?>
+			</a>
 		</li>
 		<?php endwhile; ?>
 	</ul>

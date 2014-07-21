@@ -10,7 +10,7 @@ nav > ul {
       nav > ul > li > a:hover {
         text-decoration: none; }
 
-.menu-inline:after, #footer:after, .products .product:after {
+.menu-inline:after, #footer:after, .products .product a:after {
   content: "";
   display: table;
   clear: both; }
@@ -145,7 +145,7 @@ h1, h2, h3, h4 {
   list-style: none;
   padding: 0;
   margin: 0; }
-  .products .product {
+  .products .product a {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -158,18 +158,19 @@ h1, h2, h3, h4 {
     padding: 18px;
     padding-left: 143px;
     color: #fff;
-    margin-bottom: 18px; }
-    .products .product > p {
-      color: #fff;
+    margin-bottom: 18px;
+    text-decoration: none; }
+    .products .product a > p {
       height: 100%;
-      overflow: hidden; }
-    .products .product .product-thumbnail {
+      overflow: hidden;
+      color: #f5e4b5; }
+    .products .product a .product-thumbnail {
       height: 100%;
       position: absolute;
       max-width: 125px;
       background-color: #fff;
       top: 0;
       left: 0; }
-      .products .product .product-thumbnail > img {
+      .products .product a .product-thumbnail > img {
         display: block;
         width: 100%; }
