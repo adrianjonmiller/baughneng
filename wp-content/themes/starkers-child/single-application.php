@@ -39,7 +39,11 @@
 		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1, 'category__in' => $output );
 		$loop = new WP_Query( $args );?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
-		<li class="grid">
+		<?php
+			$post_thumbnail_id = get_post_thumbnail_id();
+			$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+		?>
+		<li class="grid" data-thumb="<?php echo $post_thumbnail_url; ?>">
 			<div class="col-1-2">
 			<?php
 				if ( has_post_thumbnail() ) { ?>

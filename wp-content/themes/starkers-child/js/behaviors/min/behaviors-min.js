@@ -1,1 +1,1 @@
-DLN.Behaviors.flexslider=function(e){e.flexslider()};
+DLN.Behaviors.flexslider=function(l){l.flexslider()},DLN.Behaviors.flexslider_thumbnails=function(l){l.flexslider({controlNav:"thumbnails"})};
