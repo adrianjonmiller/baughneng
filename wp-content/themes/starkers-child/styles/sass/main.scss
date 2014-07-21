@@ -1,6 +1,7 @@
 @import "bourbon/bourbon";
 @import "resets";
 @import "extends";
+@import "typography";
 @import "vars";
 
 $color-gray: #ccc;
@@ -57,7 +58,9 @@ p {
 			font-size: 14px;
 			color: #fff;
 			text-transform: uppercase;
-			letter-spacing: .1em;
+
+			letter-spacing: .2em;
+
 			padding: 0 $pad/2;
 			display: block;
 			&:hover {
@@ -99,6 +102,7 @@ p {
 			text-decoration: none;
 			padding: 3px;
 			display: block;
+			letter-spacing: .05em;
 
 			&:hover {
 				background-color: rgba(black, 0.5);

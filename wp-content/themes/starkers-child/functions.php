@@ -32,7 +32,11 @@ function starkers_script_enqueuer() {
 	wp_register_style( 'grid', get_stylesheet_directory_uri().'/bower_components/dont_over_think_it/css/grid.css', '', '', 'screen' );
 	wp_enqueue_style( 'grid' );
 
-	wp_register_style( 'main', get_stylesheet_directory_uri().'/styles/main.css', '', '', 'screen' );
+
+	wp_register_style( 'fonts', get_stylesheet_directory_uri().'/styles/main.css', '', '', 'screen' );
+  wp_enqueue_style( 'fonts' );
+
+	wp_register_style( 'main', get_stylesheet_directory_uri().'/styles/Baughn_Engineering.css', '', '', 'screen' );
   wp_enqueue_style( 'main' );
 
 	wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );

@@ -15,6 +15,9 @@ nav > ul {
   display: table;
   clear: both; }
 
+body {
+  font-family: "Eurostile-Reg", sans-serif; }
+
 html, body {
   height: 100%;
   position: relative;
@@ -55,7 +58,7 @@ p {
       font-size: 14px;
       color: #fff;
       text-transform: uppercase;
-      letter-spacing: .1em;
+      letter-spacing: .2em;
       padding: 0 9px;
       display: block; }
       #main-menu > li > a:hover {
@@ -85,7 +88,8 @@ p {
       color: #fff;
       text-decoration: none;
       padding: 3px;
-      display: block; }
+      display: block;
+      letter-spacing: .05em; }
       .sub-menu > li > a:hover {
         background-color: rgba(0, 0, 0, 0.5); }
 
