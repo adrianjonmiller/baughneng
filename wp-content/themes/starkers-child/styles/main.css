@@ -155,7 +155,7 @@ p {
     color: #fff; }
 
 .banner-thumbnail {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto; }
 
 .flexslider {
@@ -210,3 +210,19 @@ p {
       .products .product a .product-thumbnail > img {
         display: block;
         width: 100%; }
+
+.flex-control-thumbs {
+  border-top: solid thin #ccc;
+  border-bottom: solid thin #ccc;
+  padding-top: 18px;
+  padding-bottom: 18px; }
+  .flex-control-thumbs li {
+    max-width: 120px; }
+    .flex-control-thumbs li > img {
+      max-width: 100%; }
+
+.flex-control-thumbs img {
+  opacity: .5; }
+
+.flex-control-thumbs img:hover {
+  opacity: 1; }

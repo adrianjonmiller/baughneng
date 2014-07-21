@@ -168,7 +168,7 @@ p {
 // Banner
 
 .banner-thumbnail {
-	max-width: 400px;
+	max-width: 500px;
 	margin: 0 auto;
 }
 
@@ -243,4 +243,26 @@ p {
 		}
 
 	}
+}
+
+
+.flex-control-thumbs {
+	border-top: solid thin #ccc;
+	border-bottom: solid thin #ccc;
+	padding-top: $pad;
+	padding-bottom: $pad;
+		li {
+		max-width: 120px;
+		> img {
+			max-width: 100%;
+		}
+	}
+}
+
+.flex-control-thumbs img {
+	opacity: .5;
+}
+
+.flex-control-thumbs img:hover {
+	opacity: 1;
 }
