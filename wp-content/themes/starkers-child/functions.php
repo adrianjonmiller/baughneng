@@ -123,6 +123,7 @@ add_action('init', 'my_custom_init');
 function my_custom_init() {
 	add_post_type_support( 'banner', 'thumbnail' );
 	add_post_type_support( 'banner', 'excerpt' );
+	add_post_type_support( 'banner', 'page-attributes');
 
 	add_post_type_support( 'application', 'thumbnail' );
 	add_post_type_support( 'application', 'excerpt' );

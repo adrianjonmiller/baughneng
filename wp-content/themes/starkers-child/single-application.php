@@ -17,8 +17,58 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
+<?php
+$categories = get_the_category();
+$separator = ' ';
+$output = '';
+if($categories){
+	foreach($categories as $category) {
+		$output .= $category->term_id;
+	}
+// echo trim($output, $separator);
+}
+
+?>
+
+
+<?php endwhile; ?>
+
+
+<div class="grid flexslider" data-behavior="flexslider">
+	<ul class="slides" id="banner">
+		<?php
+		$args = array( 'post_type' => 'banner', 'order' => 'ASC', 'orderby' => 'menu_order', 'posts_per_page' => -1, 'category__in' => $output );
+		$loop = new WP_Query( $args );?>
+		<?php while ( $loop->have_posts() ) : $loop->the_post();?>
+		<li class="grid">
+			<div class="col-1-2">
+			<?php
+				if ( has_post_thumbnail() ) { ?>
+				<div class="banner-thumbnail">
+					<?php the_post_thumbnail('full'); ?>
+				</div>
+			</div>
+			<div class="col-1-2">
+				<h3 class="heading-large"><?php the_title(); ?></h3>
+				<?php the_content(); ?>
+			</div>
+			<?php	} 
+			?>
+		</li>
+		<?php endwhile; ?>
+	</ul>
+</div>
+
+
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <h2><?php the_title(); ?></h2>
 <?php the_content(); ?>
+
 <?php endwhile; ?>
+
+
+
+
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
