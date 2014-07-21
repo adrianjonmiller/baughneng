@@ -62,7 +62,7 @@ body {
   -ms-font-feature-settings: "liga" 1;
   font-feature-settings: "liga" 1; }
 
-.semi-transparent-bg, .featured-items {
+.semi-transparent-bg, #header, .featured-items, .homepage-content {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 18px;
   border-radius: 18px; }
@@ -168,7 +168,8 @@ p {
   width: 100%;
   height: 125px;
   position: absolute;
-  background-color: #fff; }
+  border-radius: 0;
+  padding: 0; }
 
 #logo {
   position: absolute;
@@ -182,7 +183,8 @@ p {
   font-size: 22px;
   color: #666;
   text-transform: uppercase;
-  letter-spacing: .2em; }
+  letter-spacing: .2em;
+  text-shadow: 0 1px white; }
 
 #footer {
   background-color: gray; }
@@ -213,7 +215,8 @@ p {
 
 .featured-items {
   margin-top: 0;
-  border-radius: 0 0 18px 18px; }
+  margin-bottom: 0;
+  border-radius: 0; }
 
 .products {
   padding: 0; }
@@ -268,3 +271,6 @@ p {
 
 .content-wrapper {
   padding: 0 100px; }
+
+.homepage-content {
+  border-radius: 0 0 18px 18px; }
