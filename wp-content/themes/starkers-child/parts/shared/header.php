@@ -1,7 +1,7 @@
 <header id="header" data-behavior="header_collapse">
 	<div class="container header-container">
-	<h1 id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-	<!---	<?php bloginfo( 'description' ); ?> -->
+	<h1 id="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri().'/img/logo.png' ?>" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
+	<div id="blog-description"><?php bloginfo( 'description' ); ?></div>
 	<!---	<?php get_search_form(); ?> -->
 	</div>
 </header>

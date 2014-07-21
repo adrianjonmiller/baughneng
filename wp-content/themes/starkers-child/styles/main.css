@@ -16,10 +16,11 @@ nav > ul {
   clear: both; }
 
 h1, h2, h3, h4 {
-  margin: 0; }
+  margin: 0;
+  font-weight: normal; }
 
 body {
-  font-family: "Eurostile-Reg", sans-serif;
+  font-family: "Eurostile", sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #333;
@@ -70,7 +71,7 @@ p {
 
 #main-menu-container {
   width: 100%;
-  top: 93px;
+  top: 143px;
   left: 0;
   position: absolute; }
 
@@ -131,7 +132,7 @@ p {
         background-color: rgba(0, 0, 0, 0.5); }
 
 [role="main"] {
-  padding-top: 136px;
+  padding-top: 186px;
   padding-bottom: 50px;
   min-height: 100%;
   margin-bottom: -30px;
@@ -141,9 +142,23 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 75px;
+  height: 125px;
   position: absolute;
-  background-color: gray; }
+  background-color: #fff; }
+
+#logo {
+  position: absolute;
+  top: 18px;
+  left: 0; }
+
+#blog-description {
+  position: absolute;
+  top: 90px;
+  left: 70px;
+  font-size: 22px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: .2em; }
 
 #footer {
   background-color: gray; }
@@ -184,7 +199,7 @@ p {
   color: #1a1a1a;
   margin: 0;
   font-weight: normal;
-  height: 42px; }
+  min-height: 42px; }
 
 .products {
   list-style: none;
