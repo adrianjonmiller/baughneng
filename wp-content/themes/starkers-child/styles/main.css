@@ -35,6 +35,9 @@ h1, h2, h3, h4 {
   letter-spacing: .2em;
   font-size: 2em;
   margin-bottom: 18px; }
+  .heading-large.semi-transparent-bg, .heading-large#header, .heading-large.featured-items, .heading-large.homepage-content {
+    border-radius: 18px 18px 0 0;
+    margin-bottom: 0; }
 
 .heading-grande {
   color: #fff;
@@ -70,6 +73,8 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 18px;
   border-radius: 18px; }
+  .semi-transparent-bg.collapse, .collapse#header, .collapse.featured-items, .collapse.homepage-content {
+    border-radius: 0 0 18px 18px; }
 
 .white-bg {
   background-color: #fff;
@@ -148,7 +153,8 @@ p {
       text-decoration: none;
       padding: 3px;
       display: block;
-      letter-spacing: .1em; }
+      letter-spacing: .1em;
+      padding: 0 18px; }
       .sub-menu > li > a:hover {
         background-color: rgba(0, 0, 0, 0.5); }
 

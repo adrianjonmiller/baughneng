@@ -20,6 +20,10 @@ h2 {
 	letter-spacing: .2em;
 	font-size: 2em;
 	margin-bottom: $pad;
+	&.semi-transparent-bg {
+		border-radius: $pad $pad 0 0;
+		margin-bottom: 0;
+	}
 }
 
 .heading-grande {

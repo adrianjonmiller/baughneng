@@ -19,7 +19,7 @@
 <h2 class="semi-transparent-bg heading-large"><?php the_title(); ?></h2>
 
 <div class="col-1">
-	<div class="mdoule semi-transparent-bg">
+	<div class="module semi-transparent-bg collapse">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <?php the_content(); ?>
 <?php endwhile; ?>

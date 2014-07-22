@@ -2,6 +2,9 @@
 	background-color: rgba(white, .5);
 	padding: $pad;
 	border-radius: $pad;
+	&.collapse {
+		border-radius: 0 0 $pad $pad;
+	}
 }
 
 
