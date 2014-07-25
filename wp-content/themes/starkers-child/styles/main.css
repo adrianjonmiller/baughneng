@@ -40,7 +40,7 @@ h1, h2, h3, h4 {
 h2.heading-large {
   color: #666; }
 
-.single-application h2.heading-large {
+.single-application h2.semi-transparent-bg, .single-application h2#header, .single-application h2.featured-items, .single-application h2.homepage-content {
   margin-bottom: 18px; }
 
 .heading-grande {
